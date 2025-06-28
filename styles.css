@@ -1,0 +1,251 @@
+/* Website background gradient */
+body {
+    background: linear-gradient(to right, #EDF2F7, #E2E8F0, #EDF2F7);
+}
+
+/* Quote styling */
+.quote-container {
+    position: relative;
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+    position: absolute;
+    font-size: 2rem;
+    color: rgba(59, 130, 246, 0.2);
+}
+
+.quote-icon.left {
+    top: 1rem;
+    left: 1rem;
+}
+
+.quote-icon.right {
+    bottom: 1rem;
+    right: 1rem;
+}
+
+/* Image frame styling */
+.img-frame {
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+}
+
+.img-frame:hover {
+    transform: rotate(0);
+}
+
+.img-frame-alt {
+    transform: rotate(2deg);
+}
+
+.img-frame-alt:hover {
+    transform: rotate(0);
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Timeline styling */
+.timeline-container {
+    position: relative;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #3b82f6;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.timeline-left {
+    left: 0;
+}
+
+.timeline-right {
+    left: 50%;
+}
+
+.timeline-left::after {
+    right: -10px;
+}
+
+.timeline-right::after {
+    left: -10px;
+}
+
+/* Progress bar styling */
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Scroll progress indicator */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #3b82f6;
+    z-index: 100;
+    width: 0%;
+}
+
+/* Portfolio filter buttons */
+.filter-btn.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.5rem);
+    background-color: white;
+    padding: 0.75rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    min-width: 10rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 20;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    z-index: 50;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes float-cloud {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-15px) translateX(10px);
+    }
+}
+
+.animate-float-cloud {
+    animation: float-cloud 6s ease-in-out infinite;
+}
+
+.animate-float-cloud-alt {
+    animation: float-cloud 8s ease-in-out infinite reverse;
+}
+
+.cloud-particle {
+    position: absolute;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+/* Section background styling */
+.section-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
