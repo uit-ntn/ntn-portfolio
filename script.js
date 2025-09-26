@@ -5,59 +5,14 @@ AOS.init({
     offset: 100,
 });
 
-// Navbar scroll effect
+// Scroll progress indicator only
 window.addEventListener('scroll', function () {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('bg-white', 'bg-opacity-95', 'backdrop-blur-sm');
-        navbar.classList.remove('bg-transparent');
-    } else {
-        navbar.classList.remove('bg-opacity-95', 'backdrop-blur-sm');
-    }
-
     // Update scroll progress indicator
     const scrollProgress = document.getElementById('scroll-progress');
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrollPercent = (scrollTop / scrollHeight) * 100;
     scrollProgress.style.width = scrollPercent + '%';
-});
-
-// Initialize Particles.js
-particlesJS("particles-js", {
-    particles: {
-        number: { value: 80 },
-        color: { value: "#ffffff" },
-        shape: { type: "circle" },
-        opacity: {
-            value: 0.5,
-            random: true
-        },
-        size: {
-            value: 3,
-            random: true
-        },
-        move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: true,
-            out_mode: "out",
-        }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: {
-                enable: true,
-                mode: "grab"
-            },
-            onclick: {
-                enable: true,
-                mode: "push"
-            }
-        }
-    }
 });
 
 // DOM Content Loaded Event Handler

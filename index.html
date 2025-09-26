@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>NTN Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2364c8ff' opacity='0.2'/><path d='M25 35h50v5H25z M25 45h50v5H25z M25 55h35v5H25z M65 55h10v15H65z M30 65h25v10H30z' fill='%2364c8ff'/></svg>" />
     <!-- Thêm AOS CSS và JS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -15,15 +17,111 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Typed.js for typing animation -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Cyber Portfolio Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+        /* Cyber Background */
+        .cyber-bg {
+            background: linear-gradient(135deg, #0a0a1a 0%, #111125 25%, #0d0d22 50%, #121230 75%, #0a0a1a 100%);
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Hologram Effects */
+        .hologram {
+            background: rgba(100, 200, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            box-shadow: 0 0 20px rgba(100, 200, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .hologram:hover {
+            background: rgba(100, 200, 255, 0.15);
+            border-color: rgba(100, 200, 255, 0.5);
+            box-shadow: 0 0 30px rgba(100, 200, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Static Gradient Text */
+        .gradient-text {
+            color: #64c8ff;
+            text-shadow: 0 0 20px rgba(100, 200, 255, 0.8),
+                0 0 40px rgba(100, 200, 255, 0.5),
+                2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Enhanced Text Visibility */
+        .text-glow {
+            color: #ffffff;
+        }
+
+        /* Card Text */
+        .card-text {
+            color: #000000;
+        }
+
+        /* Banner Text Enhancement */
+        .banner-text {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                0 0 30px rgba(100, 200, 255, 0.8),
+                3px 3px 6px rgba(0, 0, 0, 1);
+        }
+
+        /* Cyber Navigation */
+        .cyber-nav {
+            background: rgba(15, 15, 35, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(100, 200, 255, 0.2);
+        }
+
+        /* Floating Animation */
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Enhanced Sections */
+        .cyber-section {
+            background: rgba(30, 40, 80, 0.4);
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Tech Icons Glow */
+        .tech-glow {
+            filter: drop-shadow(0 0 8px rgba(100, 200, 255, 0.3));
+            transition: all 0.3s ease;
+        }
+
+        .tech-glow:hover {
+            filter: drop-shadow(0 0 15px rgba(100, 200, 255, 0.6));
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 
-<body class="bg-gradient-to-r from-blue-100 via-white to-indigo-100">
+<body class="cyber-bg text-white">
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress"></div>
 
     <!-- Header and Navigation -->
     <header>
-        <nav class="bg-white shadow-lg fixed w-full z-20 transition-all duration-300" id="navbar">
+        <nav class="cyber-nav fixed w-full z-20 transition-all duration-300" id="navbar">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo Area -->
@@ -33,17 +131,22 @@
                                 class="bg-gradient-to-r from-blue-600 to-purple-600 text-white w-10 h-10 rounded-lg flex items-center justify-center">
                                 <i class="fas fa-cloud text-xl"></i>
                             </div>
-                            <span class="text-xl font-bold text-gray-800">Nguyễn Thanh Nhân</span>
+                            <span class="text-xl font-bold gradient-text font-mono">Nguyễn Thanh Nhân</span>
                         </a>
                     </div>
 
                     <!-- Desktop Navigation -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#home" class="hover:text-blue-500 transition-colors font-medium">Home</a>
-                        <a href="#about" class="hover:text-blue-500 transition-colors font-medium">About</a>
-                        <a href="#technologies" class="hover:text-blue-500 transition-colors font-medium">Technologies</a>
-                        <a href="awsworkshop/index.html" class="hover:text-blue-500 transition-colors font-medium">AWS Workshops</a>
-                        <a href="#interests" class="hover:text-blue-500 transition-colors font-medium">Interests</a>
+                        <a href="#home"
+                            class="hologram px-4 py-2 rounded-lg hover:text-cyan-400 transition-all font-medium">Home</a>
+                        <a href="awsworkshop/index.html"
+                            class="hologram px-4 py-2 rounded-lg hover:text-cyan-400 transition-all font-medium">
+                            <i class="fas fa-cloud mr-2"></i>AWS Workshops
+                        </a>
+                        <a href="contact/index.html"
+                            class="hologram bg-gradient-to-r from-blue-500/30 to-purple-500/30 text-white px-6 py-2 rounded-full hover:from-blue-500/50 hover:to-purple-500/50 transition-all font-medium border border-blue-400/50">
+                            Contact Me
+                        </a>
 
                         <!-- Mobile Menu Button -->
                         <div class="md:hidden flex items-center">
@@ -75,10 +178,10 @@
                 <a href="#home"
                     class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-500 rounded-lg">Home</a>
                 <a href="awsworkshop/index.html"
-                    class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-500 rounded-lg">AWS Workshops</a>
-                <a href="#interests"
-                    class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-500 rounded-lg">Interests</a>
-                <a href="#contact"
+                    class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-500 rounded-lg">
+                    <i class="fas fa-cloud mr-2"></i>AWS Workshops
+                </a>
+                <a href="contact/index.html"
                     class="block mt-4 mx-4 py-2 bg-blue-500 text-white text-center rounded-full hover:bg-blue-600 transition-colors">
                     Contact Me
                 </a>
@@ -88,104 +191,88 @@
     </header>
 
     <!-- Hero Section with background image -->
-    <section id="home"
-        class="pt-20 min-h-screen flex items-center relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white">
-        <!-- Floating Cloud Elements -->
-        <div class="absolute inset-0 z-0">
-            <div class="cloud-particle animate-float-cloud-alt top-[10%] left-[5%] text-7xl text-white opacity-30">
-                <i class="fas fa-cloud"></i>
-            </div>
-            <div class="cloud-particle animate-float-cloud top-[20%] left-[80%] text-8xl text-white opacity-20">
-                <i class="fas fa-cloud"></i>
-            </div>
-            <div class="cloud-particle animate-float-cloud-alt top-[60%] left-[15%] text-6xl text-white opacity-25">
-                <i class="fas fa-cloud"></i>
-            </div>
-            <div class="cloud-particle animate-float-cloud top-[70%] left-[75%] text-9xl text-white opacity-15">
-                <i class="fas fa-cloud"></i>
-            </div>
-        </div>
-
+    <section id="home" class="pt-20 min-h-screen flex items-center relative overflow-hidden text-white"
+        style="background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #0f0f23 100%); background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(15, 15, 35, 0.02)), url('./img/Background.png'); background-size: cover; background-position: center; background-attachment: fixed;">
         <!-- Semi-transparent overlay for readability -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/60 to-indigo-900/70 z-0"></div>
-
-        <!-- Particle overlay -->
-        <div class="absolute inset-0 z-1 opacity-50">
-            <div id="particles-js"></div>
-        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-blue-900/50 to-black/50 z-0"></div>
 
         <div class="max-w-6xl mx-auto px-4 z-10 relative">
             <div class="text-center" data-aos="zoom-in" data-aos-duration="1200">
                 <!-- Name with emphasis -->
                 <div class="mb-8">
-                    <h1 class="text-5xl md:text-7xl font-bold mb-2 text-white">Nguyễn Thanh Nhân</h1>
-                    <div class="h-1 w-32 bg-white mx-auto rounded-full"></div>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-2 banner-text floating drop-shadow-2xl"
+                        style="font-family: 'Orbitron', monospace;">NGUYỄN THANH NHÂN</h1>
+                    <div class="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
                 </div>
 
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-pulse">Cloud Engineer & Web Developer</h2>
-                <p class="text-xl mb-4 opacity-90">Specializing in <span class="font-bold">AWS</span>, <span
-                        class="font-bold">Docker</span>, <span class="font-bold">CI/CD</span> and <span
-                        class="font-bold">NestJS</span> + <span class="font-bold">NextJS</span></p>
-                <p class="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 banner-text drop-shadow-xl"
+                    style="font-family: 'Orbitron', monospace;">CLOUD ENGINEER & WEB DEVELOPER</h2>
+                <p class="text-xl mb-4 banner-text drop-shadow-lg">Specializing in <span
+                        class="font-bold text-cyan-300">AWS</span>, <span
+                        class="font-bold text-purple-300">Docker</span>, <span
+                        class="font-bold text-blue-300">CI/CD</span> and <span
+                        class="font-bold text-green-300">NestJS</span> + <span
+                        class="font-bold text-yellow-300">NextJS</span></p>
+                <p class="text-lg md:text-xl mb-8 banner-text max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
                     Architecting enterprise-grade cloud solutions and crafting high-performance web applications with a
                     focus on scalability and security
                 </p>
 
-                <!-- Tech Icons with cloud first -->
-                <div class="mt-12 flex flex-wrap justify-center items-center gap-6 md:gap-8">
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center backdrop-blur-sm hover:bg-opacity-30 transition-all hover:scale-110">
-                            <i class="fab fa-aws text-3xl text-white"></i>
+                <!-- Tech Icons with cyber glow -->
+                <div class="mt-12 flex flex-wrap justify-center items-center gap-4 md:gap-6">
+                    <div class="flex flex-col items-center tech-glow">
+                        <div class="w-16 h-16 rounded-full hologram flex items-center justify-center">
+                            <i class="fab fa-aws text-3xl text-orange-400"></i>
                         </div>
-                        <span class="text-xs mt-2">AWS</span>
+                        <span class="text-xs mt-2 text-cyan-300">AWS</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center backdrop-blur-sm hover:bg-opacity-30 transition-all hover:scale-110">
-                            <i class="fab fa-docker text-3xl text-white"></i>
+                    <div class="flex flex-col items-center tech-glow">
+                        <div class="w-16 h-16 rounded-full hologram flex items-center justify-center">
+                            <i class="fab fa-docker text-3xl text-blue-400"></i>
                         </div>
-                        <span class="text-xs mt-2">Docker</span>
+                        <span class="text-xs mt-2 text-cyan-300">Docker</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center backdrop-blur-sm hover:bg-opacity-30 transition-all hover:scale-110">
-                            <i class="fas fa-code-branch text-3xl text-white"></i>
+                    <div class="flex flex-col items-center tech-glow">
+                        <div class="w-16 h-16 rounded-full hologram flex items-center justify-center">
+                            <i class="fas fa-code-branch text-3xl text-green-400"></i>
                         </div>
-                        <span class="text-xs mt-2">CI/CD</span>
+                        <span class="text-xs mt-2 text-cyan-300">CI/CD</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center backdrop-blur-sm hover:bg-opacity-30 transition-all hover:scale-110">
-                            <i class="fab fa-node-js text-3xl text-white"></i>
+                    <div class="flex flex-col items-center tech-glow">
+                        <div class="w-16 h-16 rounded-full hologram flex items-center justify-center">
+                            <img src="https://docs.nestjs.com/assets/logo-small-gradient.svg" 
+                                 alt="NestJS" 
+                                 class="w-8 h-8" 
+                                 style="filter: brightness(1.2);">
                         </div>
-                        <span class="text-xs mt-2">NestJS</span>
+                        <span class="text-xs mt-2 text-cyan-300">NestJS</span>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <div
-                            class="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center backdrop-blur-sm hover:bg-opacity-30 transition-all hover:scale-110">
-                            <i class="fab fa-react text-3xl text-white"></i>
+                    <div class="flex flex-col items-center tech-glow">
+                        <div class="w-16 h-16 rounded-full hologram flex items-center justify-center">
+                            <div class="w-10 h-10 bg-black rounded-lg flex items-center justify-center border-2 border-white">
+                                <span class="text-white font-bold text-lg">▲</span>
+                            </div>
                         </div>
-                        <span class="text-xs mt-2">NextJS</span>
+                        <span class="text-xs mt-2 text-cyan-300">Next.js</span>
                     </div>
                 </div>
 
                 <!-- Social Media Icons -->
                 <div class="mt-12 flex justify-center space-x-6">
                     <a href="https://www.linkedin.com/in/nguyen-nhan-732a66247/"
-                        class="text-white hover:text-blue-200 transition-colors transform hover:scale-125 transition-transform">
+                        class="hologram p-3 rounded-lg text-blue-400 hover:text-blue-300 transition-all">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
                     <a href="https://github.com/uit-ntn"
-                        class="text-white hover:text-blue-200 transition-colors transform hover:scale-125 transition-transform">
+                        class="hologram p-3 rounded-lg text-purple-400 hover:text-purple-300 transition-all">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
                     <a href="https://www.facebook.com/UIT.NTN.13"
-                        class="text-white hover:text-blue-200 transition-colors transform hover:scale-125 transition-transform">
+                        class="hologram p-3 rounded-lg text-cyan-400 hover:text-cyan-300 transition-all">
                         <i class="fab fa-facebook text-2xl"></i>
                     </a>
                     <a href="https://www.instagram.com/np_thanh_nhan/"
-                        class="text-white hover:text-blue-200 transition-colors transform hover:scale-125 transition-transform">
+                        class="hologram p-3 rounded-lg text-pink-400 hover:text-pink-300 transition-all">
                         <i class="fab fa-instagram text-2xl"></i>
                     </a>
                 </div>
@@ -194,22 +281,23 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+    <section id="about" class="py-20 cyber-section mx-4 sm:mx-8 my-8 rounded-xl">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">About Me</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-down"
+                style="font-family: 'Orbitron', monospace;">ABOUT ME</h2>
 
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <!-- Profile Image -->
                 <div class="md:w-1/3" data-aos="fade-right">
-                    <div class="img-frame">
-                        <img src="./img/profile.png" alt="Profile" class="rounded-lg shadow-lg w-full">
+                    <div class="hologram p-1 rounded-xl">
+                        <img src="./img/profile.png" alt="Profile" class="rounded-lg w-full tech-glow">
                     </div>
                 </div>
 
                 <!-- About Content -->
                 <div class="md:w-2/3" data-aos="fade-left">
-                    <h3 class="text-2xl font-bold mb-4">Cloud Engineer & Full Stack Developer</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <h3 class="text-2xl font-bold mb-4 text-glow">Cloud Engineer & Full Stack Developer</h3>
+                    <p class="text-glow mb-6 leading-relaxed">
                         Hi, I'm Nguyễn Thanh Nhân, a passionate Cloud Engineer and Full Stack Developer with a strong
                         focus on AWS cloud solutions and modern web development. Currently pursuing my degree in
                         Computer Networks & Communication at UIT, I combine academic knowledge with hands-on experience
@@ -218,24 +306,24 @@
 
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div class="flex items-center">
-                            <i class="fas fa-user-graduate text-blue-500 mr-2"></i>
-                            <span>Student at UIT</span>
+                            <i class="fas fa-user-graduate text-cyan-400 mr-2"></i>
+                            <span class="text-glow">Student at UIT</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-code text-blue-500 mr-2"></i>
-                            <span>Full Stack Developer</span>
+                            <i class="fas fa-code text-cyan-400 mr-2"></i>
+                            <span class="text-glow">Full Stack Developer</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-cloud text-blue-500 mr-2"></i>
-                            <span>Cloud Computing</span>
+                            <i class="fas fa-cloud text-cyan-400 mr-2"></i>
+                            <span class="text-glow">Cloud Computing</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
-                            <span>Ho Chi Minh City, Vietnam</span>
+                            <i class="fas fa-map-marker-alt text-cyan-400 mr-2"></i>
+                            <span class="text-glow">Ho Chi Minh City, Vietnam</span>
                         </div>
                     </div>
 
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <p class="text-glow mb-6 leading-relaxed">
                         My expertise spans cloud architecture, backend development with NestJS, and frontend development
                         with NextJS. I'm passionate about creating efficient, scalable solutions and continuously
                         learning new technologies.
@@ -246,10 +334,11 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="technologies" class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+    <section id="technologies" class="py-20 cyber-section mx-4 sm:mx-8 my-8 rounded-xl">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Technologies & Tools</h2>
-            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-down"
+                style="font-family: 'Orbitron', monospace;">TECHNOLOGIES & TOOLS</h2>
+            <p class="text-glow text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
                 Here are the technologies, frameworks, and tools I work with to bring ideas to life
             </p>
 
@@ -260,37 +349,13 @@
                     <h3 class="text-xl font-bold mb-8 text-center text-blue-500">Frontend Development</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 justify-items-center">
                         <!-- Each Tech Item -->
-                        <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
-                            <div
-                                class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                    alt="HTML5" class="w-10 h-10">
-                            </div>
-                            <span class="text-gray-700 text-sm">HTML5</span>
-                        </div>
-                        <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
-                            <div
-                                class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                    alt="CSS3" class="w-10 h-10">
-                            </div>
-                            <span class="text-gray-700 text-sm">CSS3</span>
-                        </div>
-                        <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
-                            <div
-                                class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                    alt="JavaScript" class="w-10 h-10">
-                            </div>
-                            <span class="text-gray-700 text-sm">JavaScript</span>
-                        </div>
                         <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
                             <div
                                 class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                                     alt="React" class="w-10 h-10">
                             </div>
-                            <span class="text-gray-700 text-sm">React</span>
+                            <span class="text-white text-sm font-medium">React</span>
                         </div>
                         <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="500">
                             <div
@@ -298,14 +363,14 @@
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                                     alt="TypeScript" class="w-10 h-10">
                             </div>
-                            <span class="text-gray-700 text-sm">TypeScript</span>
+                            <span class="text-white text-sm font-medium">TypeScript</span>
                         </div>
                         <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="600">
                             <div
                                 class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
                                 <i class="fab fa-css3 text-3xl text-blue-400"></i>
                             </div>
-                            <span class="text-gray-700 text-sm">Tailwind CSS</span>
+                            <span class="text-white text-sm font-medium">Tailwind CSS</span>
                         </div>
                         <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="700">
                             <div
@@ -313,7 +378,7 @@
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
                                     alt="Bootstrap" class="w-10 h-10">
                             </div>
-                            <span class="text-gray-700 text-sm">Bootstrap</span>
+                            <span class="text-white text-sm font-medium">Bootstrap</span>
                         </div>
                         <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="800">
                             <div
@@ -321,7 +386,7 @@
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                                     alt="Next.js" class="w-10 h-10">
                             </div>
-                            <span class="text-gray-700 text-sm">Next.js</span>
+                            <span class="text-white text-sm font-medium">Next.js</span>
                         </div>
                     </div>
                 </div>
@@ -336,7 +401,7 @@
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                                 alt="Node.js" class="w-10 h-10">
                         </div>
-                        <span class="text-gray-700 text-sm">Node.js</span>
+                        <span class="text-white text-sm font-medium">Node.js</span>
                     </div>
                     <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
                         <div
@@ -344,31 +409,17 @@
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                                 alt="Express.js" class="w-10 h-10">
                         </div>
-                        <span class="text-gray-700 text-sm">Express.js</span>
+                        <span class="text-white text-sm font-medium">Express.js</span>
                     </div>
                     <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
                         <div
                             class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg"
-                                alt="NestJS" class="w-10 h-10">
+                            <img src="https://docs.nestjs.com/assets/logo-small-gradient.svg" 
+                                 alt="NestJS" 
+                                 class="w-10 h-10" 
+                                 style="filter: brightness(1.1);">
                         </div>
-                        <span class="text-gray-700 text-sm">NestJS</span>
-                    </div>
-                    <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
-                        <div
-                            class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                                alt="Java" class="w-10 h-10">
-                        </div>
-                        <span class="text-gray-700 text-sm">Java</span>
-                    </div>
-                    <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="500">
-                        <div
-                            class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-                                alt="Spring Boot" class="w-10 h-10">
-                        </div>
-                        <span class="text-gray-700 text-sm">Spring Boot</span>
+                        <span class="text-white text-sm font-medium">NestJS</span>
                     </div>
                     <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="600">
                         <div
@@ -376,23 +427,7 @@
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
                                 alt="MongoDB" class="w-10 h-10">
                         </div>
-                        <span class="text-gray-700 text-sm">MongoDB</span>
-                    </div>
-                    <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="700">
-                        <div
-                            class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                alt="MySQL" class="w-10 h-10">
-                        </div>
-                        <span class="text-gray-700 text-sm">MySQL</span>
-                    </div>
-                    <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="800">
-                        <div
-                            class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
-                                alt="Oracle" class="w-10 h-10">
-                        </div>
-                        <span class="text-gray-700 text-sm">Oracle</span>
+                        <span class="text-white text-sm font-medium">MongoDB</span>
                     </div>
                     <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="900">
                         <div
@@ -402,14 +437,14 @@
                                     d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zM6 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm3.5 2.25a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5.5-2.25a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm3.5-5.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
                             </svg>
                         </div>
-                        <span class="text-gray-700 text-sm">Postman</span>
+                        <span class="text-white text-sm font-medium">Postman</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cloud & AWS -->
             <div id="cloud-tech" class="mt-16"></div>
-            <h3 class="text-xl font-bold mb-8 text-center text-blue-500">Cloud & AWS</h3>
+            <h3 class="text-xl font-bold mb-8 text-center text-blue-500">Cloud</h3>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
                 <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="100">
                     <div
@@ -417,70 +452,37 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
                             alt="AWS" class="w-10 h-10">
                     </div>
-                    <span class="text-gray-700 text-sm">AWS</span>
+                    <span class="text-white text-sm font-medium">AWS</span>
                 </div>
                 <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="200">
                     <div
                         class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
                         <i class="fab fa-docker text-2xl text-blue-500"></i>
                     </div>
-                    <span class="text-gray-700 text-sm">Docker</span>
-                </div>
-                <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div
-                        class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                        <i class="fas fa-server text-2xl text-blue-600"></i>
-                    </div>
-                    <span class="text-gray-700 text-sm">EC2</span>
-                </div>
-                <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
-                    <div
-                        class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                        <i class="fas fa-server text-2xl text-purple-500"></i>
-                    </div>
-                    <span class="text-gray-700 text-sm">AWS Lambda</span>
-                </div>
-                <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="500">
-                    <div
-                        class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                        <i class="fas fa-database text-2xl text-orange-500"></i>
-                    </div>
-                    <span class="text-gray-700 text-sm">DynamoDB</span>
-                </div>
-                <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="600">
-                    <div
-                        class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                        <i class="fas fa-network-wired text-2xl text-green-500"></i>
-                    </div>
-                    <span class="text-gray-700 text-sm">VPC</span>
-                </div>
-                <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="700">
-                    <div
-                        class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                        <i class="fas fa-shield-alt text-2xl text-red-500"></i>
-                    </div>
-                    <span class="text-gray-700 text-sm">IAM</span>
+                    <span class="text-white text-sm font-medium">Docker</span>
                 </div>
                 <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="800">
                     <div
                         class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
                         <i class="fas fa-code-branch text-2xl text-blue-400"></i>
                     </div>
-                    <span class="text-gray-700 text-sm">CI/CD</span>
+                    <span class="text-white text-sm font-medium">CI/CD</span>
                 </div>
                 <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="900">
                     <div
                         class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
                         <i class="fas fa-cubes text-2xl text-orange-600"></i>
                     </div>
-                    <span class="text-gray-700 text-sm">Terraform</span>
+                    <span class="text-white text-sm font-medium">Terraform</span>
                 </div>
+                <!--k8s-->
                 <div class="flex flex-col items-center" data-aos="zoom-in" data-aos-delay="1000">
                     <div
                         class="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md mb-3 hover-scale">
-                        <i class="fas fa-cloud-upload-alt text-2xl text-blue-500"></i>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                            alt="Kubernetes" class="w-10 h-10">
                     </div>
-                    <span class="text-gray-700 text-sm">S3</span>
+                    <span class="text-white text-sm font-medium">Kubernetes</span>
                 </div>
             </div>
 
@@ -498,9 +500,10 @@
     </section>
 
     <!-- Work Experience -->
-    <section id="experience" class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+    <section id="experience" class="py-20 cyber-section mx-4 sm:mx-8 my-8 rounded-xl">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Work Experience</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-down"
+                style="font-family: 'Orbitron', monospace;">WORK EXPERIENCE</h2>
 
             <div class="relative">
                 <!-- Timeline center line -->
@@ -510,28 +513,39 @@
                 <div class="relative mb-16">
                     <div class="flex flex-col md:flex-row items-center">
                         <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 text-right" data-aos="fade-right">
-                            <div class="bg-white p-6 rounded-lg shadow-lg">
-                                <h3 class="text-xl font-bold text-blue-500">AWS Cloud Engineer</h3>
-                                <p class="text-gray-600 mb-2">Amazon Web Services</p>
+                            <div class="hologram p-6 rounded-lg h-full">
+                                <h3 class="text-xl font-bold text-cyan-400 mb-2"
+                                    style="font-family: 'Orbitron', monospace;">AWS CLOUD ENGINEER AMBASSADOR</h3>
+                                <p class="text-blue-200 mb-2">Amazon Web Services Vietnam</p>
                                 <p
-                                    class="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-4">
-                                    Feb 2025 - Present
+                                    class="inline-block hologram text-cyan-300 text-xs font-medium px-2.5 py-0.5 rounded-full mb-4">
+                                    Present
                                 </p>
-                                <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
-                                    <li>Designing and implementing cloud infrastructure solutions</li>
-                                    <li>Managing AWS services including EC2, S3, and Lambda</li>
-                                    <li>Optimizing cloud resource utilization and costs</li>
-                                    <li>Implementing security best practices in cloud environments</li>
+                                <ul class="list-disc list-inside text-blue-200 text-sm space-y-2 mb-4">
+                                    <li>Assisted in deploying and configuring AWS services under team guidance</li>
+                                    <li>Supported troubleshooting and maintenance tasks to ensure system stability and
+                                        uptime</li>
+                                    <li>Participated in basic automation tasks using AWS CLI and shell scripting</li>
+                                    <li>Followed internal guidelines to implement security configurations and IAM
+                                        policies</li>
+                                    <li>Collaborated with senior engineers to understand cloud architecture and best
+                                        practices</li>
                                 </ul>
+
+                                <div class="hologram p-2 rounded-xl">
+                                    <img src="./img/AWS.jpg" alt="AWS Experience" class="rounded-lg w-full tech-glow">
+                                </div>
                             </div>
                         </div>
 
                         <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                            <div class="bg-blue-500 w-6 h-6 rounded-full border-4 border-white shadow"></div>
+                            <div
+                                class="bg-cyan-400 w-6 h-6 rounded-full border-4 border-white shadow-lg shadow-cyan-400/50">
+                            </div>
                         </div>
 
-                        <div class="md:w-1/2 md:pl-12">
-                            <!-- Empty space to align timeline -->
+                        <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                            <!-- Empty space for timeline balance -->
                         </div>
                     </div>
                 </div>
@@ -539,28 +553,35 @@
                 <!-- Experience Item 2 - Webdev Studio -->
                 <div class="relative mb-16">
                     <div class="flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                            <!-- Empty space to align timeline -->
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12" data-aos="fade-right">
+                            <!-- Empty space for timeline balance -->
                         </div>
 
                         <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                            <div class="bg-blue-500 w-6 h-6 rounded-full border-4 border-white shadow"></div>
+                            <div
+                                class="bg-purple-400 w-6 h-6 rounded-full border-4 border-white shadow-lg shadow-purple-400/50">
+                            </div>
                         </div>
 
                         <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-                            <div class="bg-white p-6 rounded-lg shadow-lg">
-                                <h3 class="text-xl font-bold text-blue-500">Web Developer</h3>
-                                <p class="text-gray-600 mb-2">Webdev Studio</p>
+                            <div class="hologram p-6 rounded-lg h-full">
+                                <h3 class="text-xl font-bold text-purple-400 mb-2"
+                                    style="font-family: 'Orbitron', monospace;">WEB DEVELOPER</h3>
+                                <p class="text-blue-200 mb-2">Webdev Studio</p>
                                 <p
-                                    class="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-4">
+                                    class="inline-block hologram text-purple-300 text-xs font-medium px-2.5 py-0.5 rounded-full mb-4">
                                     2023
                                 </p>
-                                <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
+                                <ul class="list-disc list-inside text-blue-200 text-sm space-y-2 mb-4">
                                     <li>Developed responsive web applications</li>
                                     <li>Collaborated with design team on UI/UX implementation</li>
                                     <li>Built and maintained client websites</li>
                                     <li>Worked with modern web technologies and frameworks</li>
                                 </ul>
+                                <div class="hologram p-2 rounded-xl">
+                                    <img src="./img/WDS.jpg" alt="Web Development Studio"
+                                        class="rounded-lg w-full tech-glow">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -570,29 +591,35 @@
                 <div class="relative mb-16">
                     <div class="flex flex-col md:flex-row items-center">
                         <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 text-right" data-aos="fade-right">
-                            <div class="bg-white p-6 rounded-lg shadow-lg">
-                                <h3 class="text-xl font-bold text-blue-500">TECHNICAL TEAM</h3>
-                                <p class="text-gray-600 mb-2">Google Developer Student Clubs</p>
+                            <div class="hologram p-6 rounded-lg h-full">
+                                <h3 class="text-xl font-bold text-green-400 mb-2"
+                                    style="font-family: 'Orbitron', monospace;">TECHNICAL TEAM</h3>
+                                <p class="text-blue-200 mb-2">Google Developer Student Clubs</p>
                                 <p
-                                    class="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-4">
+                                    class="inline-block hologram text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full mb-4">
                                     2022
                                 </p>
-                                <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
+                                <ul class="list-disc list-inside text-blue-200 text-sm space-y-2 mb-4">
                                     <li>Participated in student developer community projects</li>
                                     <li>Learned and applied Google technologies</li>
                                     <li>Collaborated with team members on various projects</li>
                                     <li>Engaged in tech workshops and coding sessions</li>
                                 </ul>
+                                <div class="hologram p-2 rounded-xl">
+                                    <img src="./img/GDSC.jpg" alt="Google Developer Student Club"
+                                        class="rounded-lg w-full tech-glow">
+                                </div>
                             </div>
                         </div>
 
                         <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                            <div class="bg-blue-500 w-6 h-6 rounded-full border-4 border-white shadow">
-                                
+                            <div
+                                class="bg-green-400 w-6 h-6 rounded-full border-4 border-white shadow-lg shadow-green-400/50">
                             </div>
                         </div>
 
-                        <div class="md:w-1/2 md:pl-12">
+                        <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                            <!-- Empty space for timeline balance -->
                         </div>
                     </div>
                 </div>
@@ -611,66 +638,83 @@
     </section>
 
     <!-- AWS Workshop Section -->
-    <section id="cloud-engineer" class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+    <section id="cloud-engineer" class="py-20 cyber-section mx-4 sm:mx-8 my-8 rounded-xl">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">AWS Workshop Projects</h2>
-            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
-                Comprehensive AWS workshops demonstrating cloud-native architecture, MLOps, and microservices patterns with production-ready implementations
+            <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-aos="fade-down"
+                style="font-family: 'Orbitron', monospace;">AWS WORKSHOP PROJECTS</h2>
+            <p class="text-white text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                Comprehensive AWS workshops demonstrating cloud-native architecture, MLOps, and microservices patterns
+                with production-ready implementations
             </p>
 
             <!-- Workshop Stats -->
             <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
                 <!-- Workshop Steps -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center justify-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-list-ol text-2xl text-white"></i>
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-blue-600 mb-2 group-hover:text-blue-700 transition-colors">32</div>
+                        <div class="text-3xl font-bold text-blue-600 mb-2 group-hover:text-blue-700 transition-colors">
+                            32</div>
                         <div class="text-gray-600 font-medium">Workshop Steps</div>
                         <div class="text-xs text-gray-500 mt-1">Detailed Tutorials</div>
                     </div>
                 </div>
 
                 <!-- AWS Services -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center justify-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                             <i class="fab fa-aws text-2xl text-white"></i>
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-green-600 mb-2 group-hover:text-green-700 transition-colors">15+</div>
+                        <div
+                            class="text-3xl font-bold text-green-600 mb-2 group-hover:text-green-700 transition-colors">
+                            15+</div>
                         <div class="text-gray-600 font-medium">AWS Services</div>
                         <div class="text-xs text-gray-500 mt-1">Cloud Technologies</div>
                     </div>
                 </div>
 
                 <!-- Production Apps -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center justify-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-rocket text-2xl text-white"></i>
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-purple-600 mb-2 group-hover:text-purple-700 transition-colors">2</div>
+                        <div
+                            class="text-3xl font-bold text-purple-600 mb-2 group-hover:text-purple-700 transition-colors">
+                            2</div>
                         <div class="text-gray-600 font-medium">Production Apps</div>
                         <div class="text-xs text-gray-500 mt-1">Real-world Projects</div>
                     </div>
                 </div>
 
                 <!-- Cloud Native -->
-                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                    data-aos="fade-up" data-aos-delay="400">
                     <div class="flex items-center justify-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-cloud text-2xl text-white"></i>
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-orange-600 mb-2 group-hover:text-orange-700 transition-colors">100%</div>
+                        <div
+                            class="text-3xl font-bold text-orange-600 mb-2 group-hover:text-orange-700 transition-colors">
+                            100%</div>
                         <div class="text-gray-600 font-medium">Cloud Native</div>
                         <div class="text-xs text-gray-500 mt-1">Modern Architecture</div>
                     </div>
@@ -679,8 +723,8 @@
 
             <!-- View All Workshops Button -->
             <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
-                <a href="awsworkshop/index.html" 
-                   class="inline-block bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <a href="awsworkshop/index.html"
+                    class="inline-block bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     <i class="fas fa-th-list mr-2"></i>View All Workshops
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -691,7 +735,8 @@
                 <div class="quote-container">
                     <i class="quote-icon left fas fa-quote-left"></i>
                     <p class="text-gray-700 text-xl italic relative z-10 text-center px-8">
-                        "The best way to learn cloud architecture is by building real-world applications that solve actual problems."
+                        "The best way to learn cloud architecture is by building real-world applications that solve
+                        actual problems."
                     </p>
                     <p class="text-right text-gray-500 mt-4 font-medium">- Cloud Engineering Philosophy</p>
                     <i class="quote-icon right fas fa-quote-right"></i>
@@ -701,14 +746,15 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-10 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+    <section id="education" class="py-10 cyber-section mx-4 sm:mx-8 my-8 rounded-xl">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Education & Certifications</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-down"
+                style="font-family: 'Orbitron', monospace;">EDUCATION & CERTIFICATIONS</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Formal Education -->
-                <div data-aos="fade-right">
-                    <h3 class="text-2xl font-bold mb-6 text-blue-600">Academic Education</h3>
+            <div class="space-y-12">
+                <!-- Academic Education Section -->
+                <div data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-600 text-center">Academic Education</h3>
 
                     <div class="space-y-6">
                         <!-- University -->
@@ -718,10 +764,11 @@
                                     <i class="fas fa-university text-blue-500 text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg">University of Information Technology</h4>
+                                    <h4 class="font-bold text-black">University of Information Technology</h4>
+                                    <p class="text-gray-500">Vietnam National University HCM</p>
                                 </div>
                             </div>
-                            <p class="text-gray-600 mb-2"></p>
+                            <p class="text-gray-600 mb-2">Bachelor of Information Systems</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-blue-500 font-medium">2021 - 2025</span>
                                 <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">GPA:
@@ -736,7 +783,7 @@
                                     <i class="fas fa-school text-blue-500 text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg">High School for the Gifted</h4>
+                                    <h4 class="font-bold text-black">High School for the Gifted</h4>
                                     <p class="text-gray-500">High School Đỗ Công Tường</p>
                                 </div>
                             </div>
@@ -750,9 +797,9 @@
                     </div>
                 </div>
 
-                <!-- Certifications -->
-                <div data-aos="fade-left">
-                    <h3 class="text-2xl font-bold mb-6 text-blue-600">Professional Certifications</h3>
+                <!-- Professional Certifications Section -->
+                <div data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-600 text-center">Professional Certifications</h3>
 
                     <div class="space-y-6">
 
@@ -763,7 +810,7 @@
                                     <i class="fas fa-language text-blue-500 text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg">IELTS Certification</h4>
+                                    <h4 class="font-bold text-black">IELTS Certification</h4>
                                     <p class="text-gray-500">Overall 6.5</p>
                                 </div>
                             </div>
@@ -783,9 +830,8 @@
                                     <i class="fab fa-aws text-orange-500 text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg">AWS Certified Solutions Architect Professional
-                                        Associate</h4>
-                                    <p class="text-gray-500">Amazon Web Services</p>
+                                    <h4 class="font-bold text-black">AWS Certified Solutions Architect Associate</h4>
+                                    <p class="text-gray-500">Passing Score: 810/1000</p>
                                 </div>
                             </div>
                             <p class="text-gray-600 mb-2">
@@ -796,27 +842,6 @@
                                 <span class="text-blue-500 font-medium">Issued January 13th 2026</span>
                                 <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Valid until
                                     2028</span>
-                            </div>
-                        </div>
-
-
-                        <!-- Security Certificate -->
-                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-red-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-shield-alt text-red-500 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Certified Information Security Specialist</h4>
-                                    <p class="text-gray-500">ISC²</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-600 mb-2">Security protocols, threat mitigation, and secure architecture
-                            </p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-blue-500 font-medium">Issued Jun 2023</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Valid until
-                                    2026</span>
                             </div>
                         </div>
                     </div>
@@ -835,9 +860,10 @@
     </section>
 
     <!-- Interests/Hobbies Section -->
-    <section id="interests" class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+    <section id="interests" class="py-20 cyber-section mx-4 sm:mx-8 my-8 rounded-xl">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">My Interests & Hobbies</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text" data-aos="fade-down"
+                style="font-family: 'Orbitron', monospace;">MY INTERESTS & HOBBIES</h2>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <!-- Interest 1: Photography -->
@@ -964,7 +990,8 @@
                         <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
                         <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
                         <li><a href="#experience" class="text-gray-400 hover:text-white">Experience</a></li>
-                        <li><a href="awsworkshop/index.html" class="text-gray-400 hover:text-white">AWS Workshops</a></li>
+                        <li><a href="awsworkshop/index.html" class="text-gray-400 hover:text-white">AWS Workshops</a>
+                        </li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
                     </ul>
                 </div>
@@ -988,23 +1015,10 @@
                         </li>
                     </ul>
                 </div>
-
-                <!-- Newsletter -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Subscribe</h3>
-                    <p class="text-gray-400 mb-4">Subscribe to stay updated with my latest projects and articles.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Your email"
-                            class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-800">
-                        <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-lg">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
             </div>
 
             <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-                <p>© 2025 My Portfolio. All rights reserved. | Designed with <i class="fas fa-heart text-red-500"></i>
+                <p>© 2025 NTN Portfolio. All rights reserved. | Designed with <i class="fas fa-heart text-red-500"></i>
                 </p>
             </div>
         </div>
@@ -1012,9 +1026,6 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- Custom JS -->
     <script src="script.js"></script>
