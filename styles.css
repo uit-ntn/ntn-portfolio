@@ -249,3 +249,22 @@ body {
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
+
+/* Mobile dropdown improvements */
+.mobile-dropdown button {
+    transition: color 0.2s ease;
+}
+
+.mobile-dropdown button:hover {
+    color: #3b82f6;
+}
+
+.mobile-dropdown .hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown .hidden:not(.hidden) {
+    max-height: 200px;
+}

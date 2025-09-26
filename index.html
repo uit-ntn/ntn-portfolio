@@ -40,26 +40,10 @@
                     <!-- Desktop Navigation -->
                     <div class="hidden md:flex items-center space-x-8">
                         <a href="#home" class="hover:text-blue-500 transition-colors font-medium">Home</a>
-
-                        <!-- About Dropdown -->
-                        <div class="dropdown group">
-                            <button class="flex items-center hover:text-blue-500 transition-colors font-medium">
-                                About <i
-                                    class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a href="#about"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-500">About
-                                    Me</a>
-                                <a href="#cloud-engineer"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-500">Cloud
-                                    Engineering</a>
-                                <a href="#education"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-500">Education</a>
-                                <a href="#experience"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-500">Experience</a>
-                            </div>
-                        </div>
+                        <a href="#about" class="hover:text-blue-500 transition-colors font-medium">About</a>
+                        <a href="#technologies" class="hover:text-blue-500 transition-colors font-medium">Technologies</a>
+                        <a href="awsworkshop/index.html" class="hover:text-blue-500 transition-colors font-medium">AWS Workshops</a>
+                        <a href="#interests" class="hover:text-blue-500 transition-colors font-medium">Interests</a>
 
                         <!-- Mobile Menu Button -->
                         <div class="md:hidden flex items-center">
@@ -90,64 +74,10 @@
             <div class="py-4 px-2">
                 <a href="#home"
                     class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-500 rounded-lg">Home</a>
-
-                <!-- Mobile About Dropdown -->
-                <div class="block px-4 py-2 mobile-dropdown">
-                    <button class="flex items-center justify-between w-full text-left hover:text-blue-500"
-                        onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        About
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div class="hidden pl-4 mt-2 space-y-1">
-                        <a href="#about" class="block py-2 text-sm text-gray-700 hover:text-blue-500">About Me</a>
-                        <a href="#cloud-engineer" class="block py-2 text-sm text-gray-700 hover:text-blue-500">Cloud
-                            Engineering</a>
-                        <a href="#education" class="block py-2 text-sm text-gray-700 hover:text-blue-500">Education</a>
-                        <a href="#experience"
-                            class="block py-2 text-sm text-gray-700 hover:text-blue-500">Experience</a>
-                    </div>
-                </div>
-
-                <!-- Mobile Services Dropdown -->
-                <div class="block px-4 py-2 mobile-dropdown">
-                    <button class="flex items-center justify-between w-full text-left hover:text-blue-500"
-                        onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        Technologies
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div class="hidden pl-4 mt-2 space-y-1">
-                        <a href="#cloud-tech" class="block py-2 text-sm text-gray-700 hover:text-blue-500">AWS &
-                            Cloud</a>
-                        <a href="#backend-tech" class="block py-2 text-sm text-gray-700 hover:text-blue-500">NestJS
-                            Backend</a>
-                        <a href="#frontend-tech" class="block py-2 text-sm text-gray-700 hover:text-blue-500">NextJS
-                            Frontend</a>
-                        <a href="#database-tech"
-                            class="block py-2 text-sm text-gray-700 hover:text-blue-500">Databases</a>
-                        <a href="#devops-tech" class="block py-2 text-sm text-gray-700 hover:text-blue-500">CI/CD &
-                            DevOps</a>
-                    </div>
-                </div>
-
-                <a href="#portfolio"
-                    class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-500 rounded-lg">Portfolio</a>
-
-                <!-- Mobile More Dropdown -->
-                <div class="block px-4 py-2 mobile-dropdown">
-                    <button class="flex items-center justify-between w-full text-left hover:text-blue-500"
-                        onclick="this.nextElementSibling.classList.toggle('hidden')">
-                        More
-                        <i class="fas fa-chevron-down text-xs"></i>
-                    </button>
-                    <div class="hidden pl-4 mt-2 space-y-1">
-                        <a href="#testimonials"
-                            class="block py-2 text-sm text-gray-700 hover:text-blue-500">Testimonials</a>
-                        <a href="#achievements"
-                            class="block py-2 text-sm text-gray-700 hover:text-blue-500">Achievements</a>
-                        <a href="#faq" class="block py-2 text-sm text-gray-700 hover:text-blue-500">FAQ</a>
-                    </div>
-                </div>
-
+                <a href="awsworkshop/index.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-500 rounded-lg">AWS Workshops</a>
+                <a href="#interests"
+                    class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-500 rounded-lg">Interests</a>
                 <a href="#contact"
                     class="block mt-4 mx-4 py-2 bg-blue-500 text-white text-center rounded-full hover:bg-blue-600 transition-colors">
                     Contact Me
@@ -680,225 +610,80 @@
         </div>
     </section>
 
-    <!-- Enhanced Cloud Engineer Section -->
+    <!-- AWS Workshop Section -->
     <section id="cloud-engineer" class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">Cloud Architecture & Engineering</h2>
+            <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-down">AWS Workshop Projects</h2>
             <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
-                Designing and implementing enterprise-grade cloud solutions with a focus on security, scalability, and
-                cost optimization
+                Comprehensive AWS workshops demonstrating cloud-native architecture, MLOps, and microservices patterns with production-ready implementations
             </p>
 
-            <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
-                <!-- Left side - Image -->
-                <div class="md:w-2/5" data-aos="fade-right">
-                    <div class="img-frame">
-                        <img src="/img/profile.png" alt="Cloud Engineer"
-                            class="rounded-lg shadow-lg hover-scale">
-                    </div>
-                </div>
-
-                <!-- Right side - Content -->
-                <div class="md:w-3/5" data-aos="fade-left">
-                    <h3 class="text-2xl font-bold mb-6">Enterprise Cloud Solutions</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        As a Cloud Engineer specializing in AWS, I architect and implement robust cloud infrastructures
-                        that power mission-critical applications.
-                        My expertise spans cloud migration, infrastructure as code, containerization, and implementing
-                        secure CI/CD pipelines for
-                        seamless development workflows.
-                    </p>
-
-                    <div class="mb-6">
-                        <h4 class="text-lg font-semibold mb-2">Recent Cloud Projects:</h4>
-                        <ul class="space-y-3">
-                            <li class="bg-white p-3 rounded-lg shadow-sm">
-                                <span class="font-medium">E-commerce Platform Migration</span>
-                                <p class="text-gray-600 text-sm mt-1">
-                                    Migrated an on-premises e-commerce platform to AWS, resulting in 40% cost reduction
-                                    and 99.99% availability through multi-AZ architecture with Auto Scaling, CloudFront,
-                                    RDS Multi-AZ, and ElastiCache.
-                                </p>
-                            </li>
-                            <li class="bg-white p-3 rounded-lg shadow-sm">
-                                <span class="font-medium">Serverless Data Processing Pipeline</span>
-                                <p class="text-gray-600 text-sm mt-1">
-                                    Designed and implemented a serverless data processing solution using Lambda, S3,
-                                    EventBridge, and SQS that processes 2M+ events daily while maintaining sub-second
-                                    latency.
-                                </p>
-                            </li>
-                            <li class="bg-white p-3 rounded-lg shadow-sm">
-                                <span class="font-medium">Containerized Microservices Platform</span>
-                                <p class="text-gray-600 text-sm mt-1">
-                                    Built a Kubernetes-based microservices architecture on EKS with CI/CD automation,
-                                    reducing deployment times from hours to minutes and enabling 20+ daily deployments.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cloud Architecture Diagram -->
-            <div class="mt-16 bg-white p-6 rounded-xl shadow-md" data-aos="fade-up">
-                <h3 class="text-xl font-bold text-center mb-6">Cloud Architecture Example</h3>
-                <div class="bg-gray-100 p-6 rounded-lg">
-                    <div class="flex flex-wrap justify-center">
-                        <!-- This would be better with an actual architecture diagram image -->
-                        <div class="w-full md:w-5/6 mx-auto text-center">
-                            <div class="p-4 bg-blue-100 rounded-lg mb-4">
-                                <h4 class="font-bold text-blue-800">Client Layer</h4>
-                                <div class="flex justify-center gap-4 my-2">
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">CloudFront CDN</div>
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">Route 53</div>
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">WAF</div>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-center">
-                                <i class="fas fa-arrow-down text-gray-400 my-2"></i>
-                            </div>
-
-                            <div class="p-4 bg-green-100 rounded-lg mb-4">
-                                <h4 class="font-bold text-green-800">Application Layer</h4>
-                                <div class="flex flex-wrap justify-center gap-4 my-2">
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">ECS/Fargate</div>
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">API Gateway</div>
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">Lambda</div>
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">Elastic Beanstalk</div>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-center">
-                                <i class="fas fa-arrow-down text-gray-400 my-2"></i>
-                            </div>
-
-                            <div class="p-4 bg-yellow-100 rounded-lg">
-                                <h4 class="font-bold text-yellow-800">Data Layer</h4>
-                                <div class="flex flex-wrap justify-center gap-4 my-2">
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">RDS</div>
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">DynamoDB</div>
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">S3</div>
-                                    <div class="px-4 py-2 bg-white rounded shadow-sm">ElastiCache</div>
-                                </div>
-                            </div>
-
-                            <div class="flex space-x-6 mt-6 justify-center">
-                                <div class="p-3 bg-purple-100 rounded-lg text-center">
-                                    <h4 class="font-bold text-purple-800 text-sm">Monitoring</h4>
-                                    <p class="text-xs mt-1">CloudWatch, X-Ray</p>
-                                </div>
-                                <div class="p-3 bg-red-100 rounded-lg text-center">
-                                    <h4 class="font-bold text-red-800 text-sm">Security</h4>
-                                    <p class="text-xs mt-1">IAM, KMS, Shield</p>
-                                </div>
-                                <div class="p-3 bg-indigo-100 rounded-lg text-center">
-                                    <h4 class="font-bold text-indigo-800 text-sm">DevOps</h4>
-                                    <p class="text-xs mt-1">CodePipeline, CloudFormation</p>
-                                </div>
-                            </div>
+            <!-- Workshop Stats -->
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Workshop Steps -->
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-list-ol text-2xl text-white"></i>
                         </div>
                     </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2 group-hover:text-blue-700 transition-colors">32</div>
+                        <div class="text-gray-600 font-medium">Workshop Steps</div>
+                        <div class="text-xs text-gray-500 mt-1">Detailed Tutorials</div>
+                    </div>
                 </div>
-                <p class="text-gray-600 text-sm text-center mt-4">
-                    Example of a highly available, secure, and scalable microservices architecture on AWS
-                </p>
+
+                <!-- AWS Services -->
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <i class="fab fa-aws text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2 group-hover:text-green-700 transition-colors">15+</div>
+                        <div class="text-gray-600 font-medium">AWS Services</div>
+                        <div class="text-xs text-gray-500 mt-1">Cloud Technologies</div>
+                    </div>
+                </div>
+
+                <!-- Production Apps -->
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-rocket text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2 group-hover:text-purple-700 transition-colors">2</div>
+                        <div class="text-gray-600 font-medium">Production Apps</div>
+                        <div class="text-xs text-gray-500 mt-1">Real-world Projects</div>
+                    </div>
+                </div>
+
+                <!-- Cloud Native -->
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-cloud text-2xl text-white"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-600 mb-2 group-hover:text-orange-700 transition-colors">100%</div>
+                        <div class="text-gray-600 font-medium">Cloud Native</div>
+                        <div class="text-xs text-gray-500 mt-1">Modern Architecture</div>
+                    </div>
+                </div>
             </div>
 
-            <!-- AWS Core Services Grid -->
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <h4 class="font-bold text-blue-600 flex items-center mb-3">
-                        <i class="fas fa-server mr-2"></i> Compute & Serverless
-                    </h4>
-                    <p class="text-gray-600 mb-3">I design and implement scalable compute solutions that power
-                        mission-critical applications:</p>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>Auto-scaling EC2 clusters with high availability across multiple AZs</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>Serverless applications with Lambda for cost-effective, event-driven
-                                architectures</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>Containerized microservices using ECS and EKS with automated deployments</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <h4 class="font-bold text-green-600 flex items-center mb-3">
-                        <i class="fas fa-database mr-2"></i> Storage & Databases
-                    </h4>
-                    <p class="text-gray-600 mb-3">I architect robust data storage solutions optimized for performance
-                        and cost:</p>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>Scalable S3 buckets with lifecycle policies and optimized access patterns</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>High-performance RDS instances with Multi-AZ deployments and read replicas</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>DynamoDB tables with on-demand capacity and global secondary indexes</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <h4 class="font-bold text-purple-600 flex items-center mb-3">
-                        <i class="fas fa-network-wired mr-2"></i> Networking & CDN
-                    </h4>
-                    <p class="text-gray-600 mb-3">I build secure, optimized network architectures for global
-                        applications:</p>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>Custom VPC architectures with private/public subnets and security groups</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>Global content delivery with CloudFront for low-latency user experiences</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>API Gateway implementations with custom authorizers and throttling</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow" data-aos="fade-up"
-                    data-aos-delay="400">
-                    <h4 class="font-bold text-orange-600 flex items-center mb-3">
-                        <i class="fas fa-shield-alt mr-2"></i> DevOps & Security
-                    </h4>
-                    <p class="text-gray-600 mb-3">I implement robust security practices and CI/CD automation:</p>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>IAM best practices with least-privilege policies and role-based access</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>CI/CD pipelines with CodePipeline, GitHub Actions and CloudFormation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>Infrastructure as Code using CloudFormation and Terraform</span>
-                        </li>
-                    </ul>
-                </div>
+            <!-- View All Workshops Button -->
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                <a href="awsworkshop/index.html" 
+                   class="inline-block bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <i class="fas fa-th-list mr-2"></i>View All Workshops
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
 
             <!-- Bottom - Quote Section -->
@@ -906,10 +691,9 @@
                 <div class="quote-container">
                     <i class="quote-icon left fas fa-quote-left"></i>
                     <p class="text-gray-700 text-xl italic relative z-10 text-center px-8">
-                        "The cloud is not just about technology transformation, but business transformation. It's about
-                        how you bring together people, process, and technology."
+                        "The best way to learn cloud architecture is by building real-world applications that solve actual problems."
                     </p>
-                    <p class="text-right text-gray-500 mt-4 font-medium">- Werner Vogels, CTO at Amazon</p>
+                    <p class="text-right text-gray-500 mt-4 font-medium">- Cloud Engineering Philosophy</p>
                     <i class="quote-icon right fas fa-quote-right"></i>
                 </div>
             </div>
@@ -1180,7 +964,7 @@
                         <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
                         <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
                         <li><a href="#experience" class="text-gray-400 hover:text-white">Experience</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-white">Portfolio</a></li>
+                        <li><a href="awsworkshop/index.html" class="text-gray-400 hover:text-white">AWS Workshops</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
                     </ul>
                 </div>
