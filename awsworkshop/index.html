@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Workshops - Nguyễn Thanh Nhân</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS và JS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-gradient-to-r from-blue-100 via-white to-indigo-100">
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="bg-white shadow-lg fixed w-full z-20 transition-all duration-300" id="navbar">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="../index.html" class="flex items-center space-x-2">
+                            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white w-10 h-10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cloud text-xl"></i>
+                            </div>
+                            <span class="text-xl font-bold text-gray-800">Nguyễn Thanh Nhân</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="../index.html" class="hover:text-blue-500 transition-colors font-medium">
+                            <i class="fas fa-home mr-2"></i>Back to Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-10 bg-gradient-to-r from-blue-900 via-indigo-800 to-purple-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">AWS Workshops</h1>
+                <p class="text-xl mb-6">Comprehensive Cloud Architecture & Engineering Projects</p>
+                <div class="flex justify-center items-center space-x-8 mt-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold">2</div>
+                        <div class="text-sm opacity-90">Workshop Projects</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold">32</div>
+                        <div class="text-sm opacity-90">Total Steps</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold">15+</div>
+                        <div class="text-sm opacity-90">AWS Services</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop List -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Available Workshops</h2>
+            
+            <div class="space-y-8">
+                <!-- MLOps Workshop -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-gradient-to-br from-blue-600 to-purple-600 p-8 text-white flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-brain text-6xl mb-4"></i>
+                                <h3 class="text-2xl font-bold">MLOps Pipeline</h3>
+                                <p class="mt-2 opacity-90">16 Steps</p>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-2/3 p-8">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">AWS MLOps Retail Forecast</h3>
+                                    <p class="text-blue-600 font-medium">End-to-End Machine Learning Operations Pipeline</p>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Advanced</span>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-4">
+                                Complete MLOps workflow featuring infrastructure as code, container orchestration, 
+                                and automated ML pipelines. Includes Terraform, EKS, SageMaker, and comprehensive monitoring.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Terraform</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">EKS</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">SageMaker</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">CloudWatch</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">CI/CD</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Key Technologies:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Kubernetes (EKS)</li>
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Machine Learning (SageMaker)</li>
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Container Registry (ECR)</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">You'll Learn:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>MLOps best practices</li>
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Scalable ML inference</li>
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Production monitoring</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-clock mr-1"></i>8-10 hours</span>
+                                    <span><i class="fas fa-layer-group mr-1"></i>16 modules</span>
+                                </div>
+                                <a href="aws-mlops-retail-forecast.html" 
+                                   class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium">
+                                    Start Workshop
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microservices Workshop -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-gradient-to-br from-green-600 to-teal-600 p-8 text-white flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-store text-6xl mb-4"></i>
+                                <h3 class="text-2xl font-bold">E-commerce</h3>
+                                <p class="mt-2 opacity-90">16 Services</p>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-2/3 p-8">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">VinaShoes Microservices E-commerce</h3>
+                                    <p class="text-green-600 font-medium">AWS Multi-Account Architecture Workshop</p>
+                                </div>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Intermediate</span>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-4">
+                                Modern e-commerce platform with microservices architecture. Features Next.js frontend, 
+                                NestJS backend services, and comprehensive AWS multi-account setup.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Next.js</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">NestJS</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">ECS Fargate</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">DynamoDB</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">CloudFront</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Key Technologies:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Microservices (ECS)</li>
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>NoSQL Database (DynamoDB)</li>
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>CDN & WAF (CloudFront)</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">You'll Learn:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Multi-account architecture</li>
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Serverless patterns</li>
+                                        <li><i class="fas fa-check text-green-500 mr-2"></i>Security best practices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-clock mr-1"></i>6-8 hours</span>
+                                    <span><i class="fas fa-layer-group mr-1"></i>16 services</span>
+                                </div>
+                                <a href="aws-microservices-ecommerce.html" 
+                                   class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300 font-medium">
+                                    Start Workshop
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">AWS Workshops</h3>
+                    <p class="text-gray-400 mb-4">
+                        Production-ready cloud architecture workshops designed to teach real-world AWS skills.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Portfolio Home</a></li>
+                        <li><a href="aws-mlops-retail-forecast.html" class="text-gray-400 hover:text-white">MLOps Workshop</a></li>
+                        <li><a href="aws-microservices-ecommerce.html" class="text-gray-400 hover:text-white">E-commerce Workshop</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/nguyen-nhan-732a66247/" class="text-white hover:text-blue-400">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/uit-ntn" class="text-white hover:text-blue-400">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Nguyễn Thanh Nhân. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-opacity-95', 'backdrop-blur-sm');
+            } else {
+                navbar.classList.remove('bg-opacity-95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+
+</html>

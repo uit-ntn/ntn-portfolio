@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Microservices E-commerce Workshop - Nguyễn Thanh Nhân</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS và JS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-gradient-to-r from-blue-100 via-white to-indigo-100">
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="bg-white shadow-lg fixed w-full z-20 transition-all duration-300" id="navbar">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="../index.html" class="flex items-center space-x-2">
+                            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white w-10 h-10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cloud text-xl"></i>
+                            </div>
+                            <span class="text-xl font-bold text-gray-800">Nguyễn Thanh Nhân</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="../index.html" class="hover:text-blue-500 transition-colors font-medium">
+                            <i class="fas fa-home mr-2"></i>Back to Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Workshop Header -->
+    <section class="pt-20 pb-10 bg-gradient-to-r from-green-900 via-green-800 to-teal-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">VinaShoes E-commerce</h1>
+                <p class="text-xl mb-6">AWS Microservices Architecture Workshop</p>
+                <div class="flex justify-center space-x-4 text-sm">
+                    <span class="bg-green-600 px-3 py-1 rounded-full">Next.js</span>
+                    <span class="bg-red-600 px-3 py-1 rounded-full">NestJS</span>
+                    <span class="bg-blue-600 px-3 py-1 rounded-full">ECS Fargate</span>
+                    <span class="bg-purple-600 px-3 py-1 rounded-full">DynamoDB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Overview -->
+    <section class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Workshop Overview</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <img src="https://via.placeholder.com/600x400/16a34a/ffffff?text=Microservices+Architecture" 
+                         alt="Microservices Architecture" 
+                         class="rounded-lg shadow-lg">
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Project Description</h3>
+                    <p class="text-gray-700 mb-4">
+                        VinaShoes is a comprehensive AWS microservices e-commerce workshop featuring a modern shoe store 
+                        built with cloud-native architecture and best practices.
+                    </p>
+                    
+                    <h4 class="text-xl font-semibold mb-3">Key Features:</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Next.js frontend hosted on Amplify + CloudFront</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>NestJS microservices on ECS Fargate</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>DynamoDB for primary data storage</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>S3 + CloudFront for asset delivery</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>AWS WAF for security protection</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Complete CI/CD with CodePipeline</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Multi-Account Architecture</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-server text-4xl text-blue-600 mb-3"></i>
+                        <h3 class="text-xl font-bold">Production Account</h3>
+                    </div>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Next.js on Amplify</li>
+                        <li>• API Gateway HTTP API</li>
+                        <li>• ECS Fargate services</li>
+                        <li>• DynamoDB + S3 storage</li>
+                        <li>• VPC with endpoints</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-shield-alt text-4xl text-red-600 mb-3"></i>
+                        <h3 class="text-xl font-bold">Security Account</h3>
+                    </div>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• CloudTrail audit logging</li>
+                        <li>• AWS Config compliance</li>
+                        <li>• CloudWatch monitoring</li>
+                        <li>• S3 Cross-Region backup</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-code-branch text-4xl text-green-600 mb-3"></i>
+                        <h3 class="text-xl font-bold">CI/CD Account</h3>
+                    </div>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• CodeCommit repositories</li>
+                        <li>• CodeBuild automation</li>
+                        <li>• CodePipeline orchestration</li>
+                        <li>• ECR container registry</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Technology Stack</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-react text-5xl text-blue-500 mb-3"></i>
+                    <h4 class="font-semibold">Next.js</h4>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-server text-5xl text-red-600 mb-3"></i>
+                    <h4 class="font-semibold">NestJS</h4>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fab fa-aws text-5xl text-orange-500 mb-3"></i>
+                    <h4 class="font-semibold">AWS Cloud</h4>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-database text-5xl text-blue-600 mb-3"></i>
+                    <h4 class="font-semibold">DynamoDB</h4>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fab fa-docker text-5xl text-blue-500 mb-3"></i>
+                    <h4 class="font-semibold">ECS Fargate</h4>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-cloud text-5xl text-gray-600 mb-3"></i>
+                    <h4 class="font-semibold">CloudFront</h4>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="700">
+                    <i class="fas fa-shield-alt text-5xl text-green-600 mb-3"></i>
+                    <h4 class="font-semibold">WAF</h4>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="800">
+                    <i class="fas fa-code-branch text-5xl text-purple-600 mb-3"></i>
+                    <h4 class="font-semibold">CodePipeline</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">16 Core Services</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-lg shadow" data-aos="fade-right" data-aos-delay="100">
+                        <h4 class="font-bold text-blue-600">1-4: Foundation & Frontend</h4>
+                        <p class="text-sm text-gray-600">Introduction, DNS Setup, Frontend Edge (Amplify + CloudFront), VPC</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow" data-aos="fade-right" data-aos-delay="200">
+                        <h4 class="font-bold text-green-600">5-8: Networking & Data</h4>
+                        <p class="text-sm text-gray-600">NAT Gateway, VPC Endpoints, DynamoDB Migration, Amazon ECR</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow" data-aos="fade-right" data-aos-delay="300">
+                        <h4 class="font-bold text-purple-600">9-12: Backend & CI/CD</h4>
+                        <p class="text-sm text-gray-600">ECS Fargate, API Gateway, CI/CD Pipeline, CloudWatch</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow" data-aos="fade-right" data-aos-delay="400">
+                        <h4 class="font-bold text-orange-600">13-16: Monitoring & Security</h4>
+                        <p class="text-sm text-gray-600">X-Ray Tracing, CloudTrail, AWS Config, S3 Backup CRR</p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="bg-gradient-to-r from-green-600 to-teal-600 text-white p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">Workshop Outcomes</h3>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check mr-2"></i>Production-ready e-commerce platform</li>
+                            <li><i class="fas fa-check mr-2"></i>Scalable microservices architecture</li>
+                            <li><i class="fas fa-check mr-2"></i>Multi-account security setup</li>
+                            <li><i class="fas fa-check mr-2"></i>Automated CI/CD pipelines</li>
+                            <li><i class="fas fa-check mr-2"></i>Comprehensive monitoring</li>
+                            <li><i class="fas fa-check mr-2"></i>Cloud-native best practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Decisions -->
+    <section class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Key Architecture Decisions</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-user-shield text-3xl text-blue-600 mb-3"></i>
+                    <h4 class="font-bold mb-2">Authentication</h4>
+                    <p class="text-sm text-gray-600">JWT handled in NestJS application code</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-archive text-3xl text-green-600 mb-3"></i>
+                    <h4 class="font-bold mb-2">Container Registry</h4>
+                    <p class="text-sm text-gray-600">ECR for IAM-based pulls and image scanning</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-globe text-3xl text-purple-600 mb-3"></i>
+                    <h4 class="font-bold mb-2">DNS Management</h4>
+                    <p class="text-sm text-gray-600">Cloudflare with DNS-only records</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-map-marker-alt text-3xl text-red-600 mb-3"></i>
+                    <h4 class="font-bold mb-2">Multi-Region</h4>
+                    <p class="text-sm text-gray-600">ap-southeast-1 workloads, us-east-1 certificates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Structure -->
+    <section class="py-20 section-bg mx-4 sm:mx-8 my-8 rounded-xl">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Team Responsibilities</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-right">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-laptop-code text-4xl text-blue-600 mb-3"></i>
+                        <h3 class="text-2xl font-bold">Frontend Team</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Next.js application development</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Amplify hosting configuration</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>CloudFront CDN setup</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>WAF security rules</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>DNS and SSL management</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-left">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-server text-4xl text-green-600 mb-3"></i>
+                        <h3 class="text-2xl font-bold">Backend Team</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>NestJS microservices development</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>ECS Fargate containerization</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>DynamoDB database design</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>API Gateway configuration</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>VPC and networking setup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Nguyễn Thanh Nhân. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="../index.html" class="text-blue-400 hover:text-blue-300 mr-4">Back to Portfolio</a>
+                <a href="index.html" class="text-blue-400 hover:text-blue-300 mr-4">All Workshops</a>
+                <a href="aws-mlops-retail-forecast.html" class="text-blue-400 hover:text-blue-300">View Other Workshop</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-opacity-95', 'backdrop-blur-sm');
+            } else {
+                navbar.classList.remove('bg-opacity-95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+
+</html>
